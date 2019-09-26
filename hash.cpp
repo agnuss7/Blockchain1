@@ -30,12 +30,12 @@ int main() {
             std::cin >> v;
             printf("\nkas iejo: %s\nhash: %s\n", v.c_str(), hash(v).c_str());
         } else if (boo == 2) {
-            printf("| tuscias failas | %s |\n", hash(readfrom("a.txt")).c_str());
-            printf("| failas su vien a raide | %s |\n", hash(readfrom("x.txt")).c_str());
-            printf("| failas su vien G raide | %s |\n", hash(readfrom("b.txt")).c_str());
-            printf("| failas su vien G raide, bet vienas simbolis pakeistas | %s |\n", hash(readfrom("c.txt")).c_str());
-            printf("| failas su atsitiktiniais simboliais | %s |\n", hash(readfrom("d.txt")).c_str());
-            printf("| failas su tais pat atsitiktiniais simboliais, tik vienas simbolis pakeistas | %s |\n", hash(readfrom("e.txt")).c_str());
+            printf("tuscias failas \nhash: %s\n", hash(readfrom("a.txt")).c_str());
+            printf("failas su vien a raide \nhash: %s\n", hash(readfrom("x.txt")).c_str());
+            printf("failas su vien G raide \nhash: %s\n", hash(readfrom("b.txt")).c_str());
+            printf("failas su vien G raide, bet vienas simbolis pakeistas \nhash: %s\n", hash(readfrom("c.txt")).c_str());
+            printf("failas su atsitiktiniais simboliais \nhash: %s\n", hash(readfrom("d.txt")).c_str());
+            printf("failas su tais pat atsitiktiniais simboliais, tik vienas simbolis pakeistas\nhash: %s\n", hash(readfrom("e.txt")).c_str());
             /*
             printf("tuscias failas:\n");
             printf("hash: %s\n",hash(readfrom("a.txt")).c_str());
@@ -57,8 +57,7 @@ int main() {
                 t1=Clock::now();
                 out = hash(v);
                 t2=Clock::now();
-                printf("| %s | %I64d |\n",out.c_str(),(std::chrono::duration_cast<TimeType>(t2 - t1)).count());
-                //printf("\nhash: %s\nuztruko %I64d nanosekundziu\n",out.c_str(),(std::chrono::duration_cast<TimeType>(t2 - t1)).count());
+                printf("\nhash: %s\nuztruko %I64d nanosekundziu\n",out.c_str(),(std::chrono::duration_cast<TimeType>(t2 - t1)).count());
             }
             df.close();
         }
