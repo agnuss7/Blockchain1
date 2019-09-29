@@ -13,7 +13,7 @@ std::string hash(std::string a) {
         }
         nn += (int) x;
     }
-    while (bin.size() / 6 < 40) {
+    while (bin.size() / 6 < 30) {
         bin.push_back(0);
         bin.push_back(1);
     }
@@ -22,16 +22,18 @@ std::string hash(std::string a) {
         int j = rand() % bin.size();
         bin[j] = !bin[j];
     }
-    int ll = (bin.size() - 40 * 6) / 40;
+    int ll = (bin.size() - 30 * 6) / 30;
     std::string out = "";
     std::bitset < 6 > letter;
     int stup=0;
     if(ll!=0) { stup = rand() % ll; }
-    for (int i = 0; i < bin.size(); i += 6 + stup) {
+    int ct = stup;
+    for (int i = 0; i < 30; i++) {
         for (int o = 0; o < 6; o++) {
-            letter[o] = bin[i + o];
+            letter[o] = bin[ct + o];
         }
         if(ll!=0) { stup = rand() % ll; }
+        ct += 6 + stup;
         out += base[letter.to_ulong()];
     }
     return out;
