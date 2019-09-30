@@ -1,7 +1,8 @@
-﻿## V0.1
+﻿## V0.2
+
 # Hash funkcija
 
-Veikia paversdama kiekvieną įeities simbolį į 8 bitus ir sujungia juos visus į bitų vektorių. Tada juos pakaitalioja. Tada išimami 40 po 6 bitus. Tie bitai paverčiami simboliais iš Base64 lentelės. 
+Veikia paversdama kiekvieną įeities simbolį į 8 bitus ir sujungia juos visus į bitų vektorių. Tada juos pakaitalioja, vektoriaus indeksą pasirinkdama rand() funkcija (sėkla yra įvesties simbolių ascii lentelės indeksų suma, taigi algoritmas deterministinis). Tada išimami 30 po 6 bitus. Tie bitai paverčiami simboliais iš Base64 lentelės ir sudedami į string'ą, kuris ir yra mūsų hash'as. 
 
 # Testai
 
@@ -11,7 +12,7 @@ Ta pati įvestis duoda tą pačią maišą ir pan...
 
 ![input](img/1.png)
 
-### Testai su failais
+### Testai su failais (1 testas)
 
 | Įvedimo failas | Išvedimas                   |
 | ------------------ | ------------------------------- |
@@ -26,7 +27,7 @@ Ta pati įvestis duoda tą pačią maišą ir pan...
 
 
 
-### Spartumo skaičiavimas
+### Spartumo skaičiavimas (2 testas)
 
 Kiekviena eilutė iš Lietuvos Konstitucijos.
 
@@ -103,17 +104,22 @@ Maišos laikas tiesiogiai proporcingas įeigos eilutės ilgiui.
 
  | bazhEnBjbV6P5Gqiqzx6ZyzPC5Jk1e | 338 |
 
- | Et9RGtZGJHG4PuuJYzmPCvnCpkpipg | 1410 |
+Manau, funkcija visai greita, nes pats maišymas vyksta su bool vektorium, turbūt daugiausia laiko užima string'o išskirstymas į simbolius ir/ar gautų simbolių sukišimas į string'ą.
 
- | mP5usbtBwOJqaqruZEeC1z0gIOC9Bp | 735 |
+### pasikartojimas (3 testas)
 
-### pasikartojimas
+Šiek tiek kitaip atlikau užduotį. Vietoj porų, tiesiog sugeneravau 10 000 skirtingų string'ų (per https://www.random.org/strings/) ir parašiau funkciją, suskaičiuojančią kiek iš viso yra vienodų išvestų hash'ų.
 
-Šiek tiek kitaip atlikau užduotį. Vietoj porų, tiesiog sugeneravau 10 000 string'ų ir 
+![input](img/2.png)
+Šiuo atveju, regis nebuvo nei vieno vienodo hash'o. Maišos funcija visai neblogai maišo...
+(* kartais paskutinė input failo eilutė perskaitoma du kartus, taigi output faile pačiam gale atsiranda 2 vienodi hash'ai. Input faile gale neturėtų būti naujos eilutės, man atrodo...)
 
-### panasumas tarp poru
+### panašumas tarp porų (4 testas)
 
+Dauguma turi daugmaž pusę sutampančių bitų. Simbolių lygmenyje tai visgi atrodo gan skirtingai... Neradau nei vienos 100% sutampančios poros.
+(* paskutinė input failo eilutė kartais yra hash'uojama 2 kartus taigi paskutinė hash'uota "pora" gali rodyti, jog sutampa 180/180)
 
+Pavyzdys:
 
 | pirmas hash'as | antras hash'as | kiek bitų sutampa | statusas |
 |---|---|---|---|

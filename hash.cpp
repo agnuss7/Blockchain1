@@ -31,7 +31,7 @@ int main() {
             std::cin >> v;
             printf("\nkas iejo: %s\nhash: %s\n", v.c_str(), hash(v).c_str());
         } else if (boo == 1) {
-           /* printf("\ntuscias failas \nhash: %s\n", hash(readfrom("a.txt")).c_str());
+            printf("\ntuscias failas \nhash: %s\n", hash(readfrom("a.txt")).c_str());
             printf("\nfailas su vien a raide \nhash: %s\n", hash(readfrom("x.txt")).c_str());
             printf("\nfailas su vien G raide \nhash: %s\n", hash(readfrom("b.txt")).c_str());
             printf("\nfailas su vien G raide, bet vienas simbolis pakeistas \nhash: %s\n", hash(readfrom("c.txt")).c_str());
@@ -39,7 +39,7 @@ int main() {
             printf("\nfailas 2 su atsitiktiniais simboliais \nhash: %s\n", hash(readfrom("g.txt")).c_str());
             printf("\nfailas 3 su atsitiktiniais simboliais \nhash: %s\n", hash(readfrom("d.txt")).c_str());
             printf("\nfailas su tais pat atsitiktiniais simboliais kaip 3, tik vienas simbolis pakeistas\nhash: %s\n", hash(readfrom("e.txt")).c_str());
-*/
+/*
             printf("| tuscias failas | %s |\n", hash(readfrom("a.txt")).c_str());
             printf("| failas su vien a raide | %s |\n", hash(readfrom("x.txt")).c_str());
             printf("| failas su vien G raide | %s |\n", hash(readfrom("b.txt")).c_str());
@@ -48,7 +48,7 @@ int main() {
             printf("| failas 2 su atsitiktiniais simboliais | %s |\n", hash(readfrom("g.txt")).c_str());
             printf("| failas 3 su atsitiktiniais simboliais | %s |\n", hash(readfrom("d.txt")).c_str());
             printf("| failas su tais pat atsitiktiniais simboliais kaip 3, tik vienas simbolis pakeistas | %s |\n", hash(readfrom("e.txt")).c_str());
-        }
+  */      }
         else if (boo == 2) {
             std::chrono::high_resolution_clock::time_point t1;
             std::chrono::high_resolution_clock::time_point t2;
@@ -62,8 +62,8 @@ int main() {
                 out = hash(v);
                 t2=Clock::now();
                 time+=std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1).count();
-                //printf("\nhash: %s\nuztruko %I64d mikrosekundziu\n",out.c_str(),(std::chrono::duration_cast<TimeType>(t2 - t1)).count());
-                printf("\n | %s | %I64d | \n",out.c_str(),(std::chrono::duration_cast<TimeType>(t2 - t1)).count());
+                printf("\nhash: %s\nuztruko %I64d mikrosekundziu\n",out.c_str(),(std::chrono::duration_cast<TimeType>(t2 - t1)).count());
+                //printf("\n | %s | %I64d | \n",out.c_str(),(std::chrono::duration_cast<TimeType>(t2 - t1)).count());
             }
             df.close();
             printf("\nis viso: %d milisekundziu\n", time);
@@ -82,7 +82,6 @@ int main() {
             printf("kiek vienodu hash'u: %d\n", check());
         }
         else if (boo == 4) {
-            //printf("hash1: %s\thash2: %s\tdifference: %f\n","foo","f00",diff("foo","f00"));
             std::ifstream df ("pairs.txt");
             std::string v;
             std::string out1;
@@ -92,8 +91,8 @@ int main() {
                 out1 = hash(v);
                 getline(df, v);
                 out2 = hash(v);
-                //printf("\nhash1: %s\thash2: %s\tdiff: %d\tstatusas: %s\n",out1.c_str(),out2.c_str(),diff(out1,out2), (status(diff(out1,out2))).c_str());
-                printf("| %s | %s | %d/180 | %s |\n",out1.c_str(),out2.c_str(),diff(out1,out2), (status(diff(out1,out2))).c_str());
+                printf("\nhash1: %s\thash2: %s\tdiff: %d\tstatusas: %s\n",out1.c_str(),out2.c_str(),diff(out1,out2), (status(diff(out1,out2))).c_str());
+                //printf("| %s | %s | %d/180 | %s |\n",out1.c_str(),out2.c_str(),diff(out1,out2), (status(diff(out1,out2))).c_str());
 
         }
         df.close();
