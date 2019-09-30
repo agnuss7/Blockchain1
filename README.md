@@ -37,71 +37,38 @@ Maišos laikas tiesiogiai proporcingas įeigos eilutės ilgiui.
 | Eilutės maiša | Laikas mikrosekundėm |
 | --- | --- |
  | FV2C+ezygftwITy8FRf5JfSv6Zx8nq | 1448 |
-
  | 7DUTLlH5/wgVfJEDnBhrC2EMV+KGTK | 956 |
-
  | jBBJWlqfoqtG84Njtm5rKOs+AsvADX | 905 |
-
  | H7SzR/h6a/X5C1/treAFyYkPI4ocQv | 821 |
-
  | hHfqLJjdOS57WQQhgYUEU9NIKIoEzz | 421 |
-
  | vfCZX0SgoZQk4+aI7PHAEhMAHM+tOj | 1945 |
-
  | msFO5bpBR77KsGCNEN8zHAkTKGs23A | 317 |
-
  | 4X+6F8dgIZkOtf6Kw21HsDRv3Jzcf5 | 1022 |
-
  | Lgx0+l8T9ZVJVRGXLJdl/3hUMqebQy | 1937 |
-
  | 3hS+03tCiVH+JUuM7Q11juiGNXeSRg | 1296 |
-
  | Xh6ITEh5XNCb6wICAAg5DydZgNRExH | 1169 |
-
  | Tgrb1yOU0Q+D1pDVsOPLLp2V+3cS3f | 2845 |
-
  | RCtc3W0Tyu86klQ3tV7dpO7xYWHZg1 | 1060 |
-
  | ZVO6Ej+IAPMjnjaZYrWOTCchEmI154 | 3749 |
-
  | tU1q21MjK61kzxZhPVFh4yJ9teCUKP | 1661 |
-
  | +cgRvPS6aS/Bp13qn6zCcEhACoF7Mn | 310 |
-
  | G0AnqrigMmOt3+PDHPlqMYRGf2FZui | 396 |
-
  | u6HHgq4pWACT/dC3TddvEBa86i48we | 403 |
-
  | Gi9tPedWizL45RpwSnaswDu6Buo+on | 1371 |
-
  | 7ywclatyhmcuKWT7QXlb/SZ8INB/7w | 448 |
-
  | fkxQ6lUfigTyn7jaWCURyHiLjm1krq | 1461 |
-
  | 6jvqB3EO9FguazAxBSDd9CfHY9Dzak | 422 |
-
  | 3ZkJYbqrNZHS6cIyebcOeZ5cHNK3Op | 2261 |
-
  | GL9h3e6kwzplgG//ww4io88/K6Awmp | 4010 |
-
  | WEGEyrcISGXiOGmZ0CUWYYuoChPTTg | 530 |
-
  | Bu4YGO05oGQr4XvyG/pKSuP79S67bX | 2210 |
-
  | sWgE8xHlGIehWXBPb1vwc/u+vujdYW | 382 |
-
  | aVbKx5+B0vS7EP98IqNIDgFzWx5Frb | 2153 |
-
  | pfTy95A9dawUsCFoWlMDTeDBtY7f8f | 760 |
-
  | 2frQaV8GSJgP/lrXnNr2djYCILE89u | 769 |
-
  | zhQWD89Dem9lpUfzhfrSb//jlwCNc3 | 337 |
-
  | k4tNmUVuMDsuhzfPkRCFeZNYVV/5ME | 1242 |
-
  | zRA+e60sHnsocmaG7jqu6NagjRe7Ec | 1277 |
-
  | bazhEnBjbV6P5Gqiqzx6ZyzPC5Jk1e | 338 |
 
 Manau, funkcija visai greita, nes pats maišymas vyksta su bool vektorium, turbūt daugiausia laiko užima string'o išskirstymas į simbolius ir/ar gautų simbolių sukišimas į string'ą.
